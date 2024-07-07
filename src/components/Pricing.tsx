@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -7,8 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Check } from "lucide-react";
+} from '@/components/ui/card';
+import { Check } from 'lucide-react';
 
 enum PopularPlanType {
   NO = 0,
@@ -26,120 +26,100 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: 'Пробный',
     popular: 0,
     price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
-    benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
-    ],
+    description: 'Идеально подходит для ознакомления с возможностями сервиса',
+    buttonText: 'Попробовать бесплатно',
+    benefitList: ['5 генераций', '1 редактирование', 'GPT-3.5'],
   },
   {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Enterprise",
+    title: 'Стартовый',
     popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
+    price: 499,
+    description: 'Стартовый набор для распробывания новых возможностей',
+    buttonText: 'Выбрать',
+    benefitList: ['100 генераций', '25 редактирований', 'GPT-3.5'],
+  },
+  {
+    title: 'Про',
+    popular: 1,
+    price: 1499,
+    description: 'Подходит для активного использования',
+    buttonText: 'Выбрать',
+    benefitList: ['500 генераций', '100 редактирований', 'GPT-4 Omni', 'Приоритетная поддержка'],
+  },
+  {
+    title: 'Эксперт',
+    popular: 0,
+    price: 3999,
+    description: 'Идеально для профессионалов и агентств',
+    buttonText: 'Выбрать',
+    benefitList: ['2000 генераций', '250 редактирований', 'GPT-4 Omni', 'Персональная поддержка'],
   },
 ];
 
 export const Pricing = () => {
   return (
-    <section
-      id="pricing"
-      className="container py-24 sm:py-32"
-    >
+    <section id="pricing" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
+        <span className="bg-gradient-to-b from-section-foreground to-primary text-transparent bg-clip-text">
+          Тарифы
         </span>
-        Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Выберите план, который подходит именно вам, и начните работать с Contentik уже сегодня
       </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pricingList.map((pricing: PricingProps) => (
-          <Card
-            key={pricing.title}
-            className={
-              pricing.popular === PopularPlanType.YES
-                ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
-                : ""
-            }
-          >
-            <CardHeader>
-              <CardTitle className="flex item-center justify-between">
-                {pricing.title}
-                {pricing.popular === PopularPlanType.YES ? (
-                  <Badge
-                    variant="secondary"
-                    className="text-sm text-primary"
+          <div className="tariffGradient dark:tariffGradientDark">
+            <Card
+              key={pricing.title}
+              className={
+                pricing.popular === PopularPlanType.YES
+                  ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 tariffGradient'
+                  : ''
+              }
+            >
+              <CardHeader>
+                <CardTitle className="flex item-center justify-between">
+                  {pricing.title}
+                  {pricing.popular === PopularPlanType.YES ? (
+                    <Badge variant="secondary" className="bg-colorful text-sm text-primary">
+                      Популярный
+                    </Badge>
+                  ) : null}
+                </CardTitle>
+                <div className="pt-2">
+                  <span className="text-3xl font-bold">{pricing.price} ₽</span>
+                  <span className="text-muted-foreground"> / месяц</span>
+                </div>
+
+                <CardDescription className="pt-2 pb-4">{pricing.description}</CardDescription>
+                <Button className="w-full p-0">
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://blackraydev.github.io/contentik-ai"
+                    className="w-full h-full flex items-center justify-center"
                   >
-                    Most popular
-                  </Badge>
-                ) : null}
-              </CardTitle>
-              <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
-              </div>
+                    {pricing.buttonText}
+                  </a>
+                </Button>
+              </CardHeader>
 
-              <CardDescription>{pricing.description}</CardDescription>
-            </CardHeader>
+              <hr className="w-4/5 m-auto mb-4" />
 
-            <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
-            </CardContent>
-
-            <hr className="w-4/5 m-auto mb-4" />
-
-            <CardFooter className="flex">
-              <div className="space-y-4">
-                {pricing.benefitList.map((benefit: string) => (
-                  <span
-                    key={benefit}
-                    className="flex"
-                  >
-                    <Check className="text-green-500" />{" "}
-                    <h3 className="ml-2">{benefit}</h3>
-                  </span>
-                ))}
-              </div>
-            </CardFooter>
-          </Card>
+              <CardFooter className="flex">
+                <div className="space-y-4">
+                  {pricing.benefitList.map((benefit: string) => (
+                    <span key={benefit} className="flex">
+                      <Check className="text-green-500" /> <h3 className="ml-2">{benefit}</h3>
+                    </span>
+                  ))}
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
         ))}
       </div>
     </section>

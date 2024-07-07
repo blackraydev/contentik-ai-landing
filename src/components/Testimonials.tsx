@@ -1,11 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface TestimonialProps {
   image: string;
@@ -16,95 +10,76 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    image: '/src/assets/avatar1.png',
+    name: 'Анна',
+    userName: 'Копирайтер',
+    comment:
+      'Как копирайтер, я всегда ищу способы сэкономить время. Этот инструмент - настоящая находка!',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    image: '/src/assets/avatar2.png',
+    name: 'Дмитрий',
+    userName: 'Блогер',
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-  },
-
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
-    comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      'Сервис помогает мне создавать интересные и уникальные посты для моего блога. Читатели заметили улучшение и вовлеченность выросла.',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    image: '/src/assets/avatar3.png',
+    name: 'Ольга',
+    userName: 'Руководитель отдела маркетинга',
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      'Сервис просто потрясающий! Моя команда SMM теперь может создавать уникальный контент, который привлекает больше подписчиков.',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
+    image: '/src/assets/avatar4.png',
+    name: 'Иван',
+    userName: 'SMM-специалист',
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      'Contentik значительно упростил мою работу. Теперь я могу создавать качественный контент быстрее и проще.',
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
+    image: '/src/assets/avatar5.png',
+    name: 'Наталья',
+    userName: 'Редактор новостного портала',
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      'Благодаря этому инструменту я могу генерировать статьи для нашего сайта намного быстрее. Спасибо Contentik!',
+  },
+  {
+    image: '/src/assets/avatar6.png',
+    name: 'Мария',
+    userName: 'Контент-менеджер',
+    comment:
+      'Contentik стал незаменимым помощником в моей работе. Благодаря ему я могу создавать качественные статьи быстрее и эффективнее.',
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <section
-      id="testimonials"
-      className="container py-24 sm:py-32"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          People Love{" "}
+    <section id="testimonials" className="container py-24 sm:py-32">
+      <h2 className="pb-8 text-3xl md:text-4xl font-bold">
+        <span className="bg-gradient-to-b from-section-foreground to-primary text-transparent bg-clip-text">
+          У нас есть фанаты
         </span>
-        This Landing Page
       </h2>
 
-      <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
-      </p>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2 lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
+        {testimonials.map(({ image, name, userName, comment }: TestimonialProps) => (
+          <Card key={userName} className="max-w-md md:break-inside-avoid overflow-hidden">
+            <CardHeader className="flex flex-row items-center gap-4 pb-2">
+              <Avatar>
+                <AvatarImage alt="" src={image} />
+                <AvatarFallback>OM</AvatarFallback>
+              </Avatar>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
-        {testimonials.map(
-          ({ image, name, userName, comment }: TestimonialProps) => (
-            <Card
-              key={userName}
-              className="max-w-md md:break-inside-avoid overflow-hidden"
-            >
-              <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                <Avatar>
-                  <AvatarImage
-                    alt=""
-                    src={image}
-                  />
-                  <AvatarFallback>OM</AvatarFallback>
-                </Avatar>
+              <div className="flex flex-col">
+                <CardTitle className="text-lg">{name}</CardTitle>
+                <CardDescription>{userName}</CardDescription>
+              </div>
+            </CardHeader>
 
-                <div className="flex flex-col">
-                  <CardTitle className="text-lg">{name}</CardTitle>
-                  <CardDescription>{userName}</CardDescription>
-                </div>
-              </CardHeader>
-
-              <CardContent>{comment}</CardContent>
-            </Card>
-          )
-        )}
+            <CardContent>{comment}</CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );

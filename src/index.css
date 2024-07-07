@@ -2,28 +2,79 @@ html {
   scroll-behavior: smooth;
 }
 
+.tariffGradient {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    -45deg,
+    rgb(227, 185, 251),
+    rgb(193, 109, 247),
+    rgb(126, 106, 239),
+    rgb(91, 77, 236)
+  );
+  animation: glowing 5s ease alternate infinite;
+  background-size: 400% 400%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    background: white;
+    border-radius: 8px;
+    z-index: -1;
+  }
+}
+
+.dark {
+  .tariffGradient {
+    &:after {
+      background: rgb(10, 10, 12);
+    }
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 /* HeroCards background shadow */
 .shadow {
   position: absolute;
-  background: hsl(var(--primary) / 0%);
-  border-radius: 24px;
+  background: rgb(227, 185, 251);
+  border-radius: 50%;
   rotate: 35deg;
 
-  width: 260px;
-  top: 200px;
-  height: 400px;
+  height: 300px;
+  width: 300px;
+  top: 300px;
+  right: 30%;
   filter: blur(150px);
-  animation: shadow-slide infinite 4s linear alternate;
+  animation: shadow-slide infinite 5s ease-in-out alternate;
+  z-index: -1;
 }
 
 @keyframes shadow-slide {
   from {
-    background: hsl(var(--primary) / 20%);
-    right: 460px;
+    background: rgb(227, 185, 251);
+    transform: scale(1);
   }
   to {
-    background: hsl(var(--primary) / 80%);
-    right: 160px;
+    background: rgb(91, 77, 236);
+    transform: scale(0.5);
   }
 }
 
@@ -34,32 +85,33 @@ html {
 
   @keyframes shadow-slide {
     from {
-      background: hsl(var(--primary) / 20%);
-      right: 460px;
+      background: rgb(227, 185, 251);
+      transform: scale(1);
     }
     to {
-      background: hsl(var(--primary) / 50%);
-      right: 160px;
+      background: rgb(91, 77, 236);
+      transform: scale(0.5);
     }
   }
 }
 
 @media (max-width: 768px) {
   .shadow {
-    top: 70px;
-    width: 100px;
-    height: 350px;
-    filter: blur(60px);
+    right: calc(50% - 75px);
+    top: 150px;
+    width: 150px;
+    height: 150px;
+    filter: blur(100px);
   }
 
   @keyframes shadow-slide {
     from {
-      background: hsl(var(--primary) / 20%);
-      right: 280px;
+      background: rgb(227, 185, 251);
+      transform: scale(1);
     }
     to {
-      background: hsl(var(--primary) / 30%);
-      right: 100px;
+      background: rgb(91, 77, 236);
+      transform: scale(0.5);
     }
   }
 }

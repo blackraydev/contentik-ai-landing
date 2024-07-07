@@ -1,22 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/navigation-menu';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { buttonVariants } from './ui/button';
+import { Menu } from 'lucide-react';
+import { ModeToggle } from './mode-toggle';
+import { LogoIcon } from './Icons';
 
 interface RouteProps {
   href: string;
@@ -25,20 +18,24 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: '#features',
+    label: 'Преимущества',
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: '#use-cases',
+    label: 'Примеры',
   },
   {
-    href: "#pricing",
-    label: "Pricing",
+    href: '#testimonials',
+    label: 'Отзывы',
   },
   {
-    href: "#faq",
-    label: "FAQ",
+    href: '#pricing',
+    label: 'Тарифы',
+  },
+  {
+    href: '#faq',
+    label: 'FAQ',
   },
 ];
 
@@ -51,11 +48,11 @@ export const Navbar = () => {
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
+              href="#"
+              className="ml-2 font-bold text-xl flex align-center"
             >
-              <LogoIcon />
-              ShadcnUI/React
+              <img className="w-7 h-7 mr-2 rounded-md" src="/src/assets/logo.png" />
+              Contentik
             </a>
           </NavigationMenuItem>
 
@@ -63,47 +60,35 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="sr-only">Menu Icon</span>
+                <Menu className="flex md:hidden h-5 w-5" onClick={() => setIsOpen(true)}>
+                  <span className="sr-only">Меню</span>
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={'left'}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
-                  </SheetTitle>
+                  <SheetTitle className="font-bold text-xl">Contentik</SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                <nav className="flex flex-col justify-center items-center gap-2 mt-10">
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({ variant: 'ghost' })}
                     >
                       {label}
                     </a>
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
+                    href="https://blackraydev.github.io/contentik-ai"
+                    className={`mt-10 border ${buttonVariants({ variant: 'default' })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    Вход
                   </a>
                 </nav>
               </SheetContent>
@@ -118,7 +103,7 @@ export const Navbar = () => {
                 href={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
+                  variant: 'ghost',
                 })}`}
               >
                 {route.label}
@@ -129,12 +114,10 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              href="https://blackraydev.github.io/contentik-ai"
+              className={`border ${buttonVariants({ variant: 'default' })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              Вход
             </a>
 
             <ModeToggle />

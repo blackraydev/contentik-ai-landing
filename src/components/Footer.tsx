@@ -1,4 +1,30 @@
-import { LogoIcon } from "./Icons";
+interface RouteProps {
+  href: string;
+  label: string;
+}
+
+const routeList: RouteProps[] = [
+  {
+    href: '#features',
+    label: 'Преимущества',
+  },
+  {
+    href: '#use-cases',
+    label: 'Примеры',
+  },
+  {
+    href: '#testimonials',
+    label: 'Отзывы',
+  },
+  {
+    href: '#pricing',
+    label: 'Тарифы',
+  },
+  {
+    href: '#faq',
+    label: 'FAQ',
+  },
+];
 
 export const Footer = () => {
   return (
@@ -7,161 +33,41 @@ export const Footer = () => {
 
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
-          <a
-            rel="noreferrer noopener"
-            href="/"
-            className="font-bold text-xl flex"
-          >
-            <LogoIcon />
-            ShadcnUI/React
+          <a rel="noreferrer noopener" href="#" className="font-bold text-xl flex">
+            <img className="w-7 h-7 mr-2 rounded-md" src="/src/assets/logo.png" />
+            Contentik
           </a>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Github
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitter
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Dribbble
-            </a>
-          </div>
+          <h3 className="font-bold text-lg">О сервисе</h3>
+          {routeList.map(({ href, label }) => (
+            <div>
+              <a rel="noreferrer noopener" href={href} className="opacity-60 hover:opacity-100">
+                {label}
+              </a>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
+          <h3 className="font-bold text-lg">Сообщество</h3>
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
+            <a rel="noreferrer noopener" href="#" className="opacity-60 hover:opacity-100">
+              Instagram
             </a>
           </div>
 
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Features
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Pricing
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Youtube
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Discord
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitch
+            <a rel="noreferrer noopener" href="#" className="opacity-60 hover:opacity-100">
+              Telegram
             </a>
           </div>
         </div>
       </section>
 
       <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 Landing page made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/leoMirandaa"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>
-        </h3>
+        <h3>&copy; 2024 Contentik AI </h3>
       </section>
     </footer>
   );

@@ -1,96 +1,62 @@
-import { Badge } from "./ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { WandSparkles, Pencil, Settings, List } from 'lucide-react';
 
 interface FeatureProps {
+  icon: JSX.Element;
   title: string;
   description: string;
-  image: string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+    icon: <WandSparkles size={40} className="text-colorful" />,
+    title: 'Генерация',
+    description: 'Создавайте уникальный контент на основе указанных параметров.',
   },
   {
-    title: "Intuitive user interface",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3,
+    icon: <Pencil size={40} className="text-colorful" />,
+    title: 'Редактирование',
+    description: 'Улучшайте и адаптируйте ваши тексты.',
   },
   {
-    title: "AI-Powered insights",
+    icon: <Settings size={40} className="text-colorful" />,
+    title: 'Параметры',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
+      'Настраивайте тему, описание, тип контента, целевую аудиторию, ключевые слова, стиль письма, тон письма и язык генерации.',
   },
-];
-
-const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  {
+    icon: <List size={40} className="text-colorful" />,
+    title: 'История',
+    description: 'Сохраняйте и просматривайте все ваши генерации.',
+  },
 ];
 
 export const Features = () => {
   return (
-    <section
-      id="features"
-      className="container py-24 sm:py-32 space-y-8"
-    >
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+    <section id="features" className="container text-center py-24 sm:py-32">
+      <h2 className="text-3xl md:text-4xl font-bold ">
+        <span className="bg-gradient-to-b from-section-foreground to-primary text-transparent bg-clip-text">
+          Преимущества
         </span>
       </h2>
-
-      <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
-              {feature}
-            </Badge>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
+      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
+        Contentik позволяет вам генерировать и редактировать тексты с использованием ИИ, экономя
+        ваше время и усилия. Вы можете указать все необходимые параметры для получения идеального
+        текста.
+      </p>
+      <div className="shadow"></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map(({ icon, title, description }: FeatureProps) => (
+          <Card key={title} className="bg-muted">
             <CardHeader>
-              <CardTitle>{title}</CardTitle>
+              <CardTitle className="grid gap-4 place-items-center">
+                {icon}
+                {title}
+              </CardTitle>
             </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
+            <CardContent>
+              <CardDescription>{description}</CardDescription>
+            </CardContent>
           </Card>
         ))}
       </div>
