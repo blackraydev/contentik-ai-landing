@@ -1,10 +1,9 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "contentik-ai-landing",
+  "description": "Contentik AI Landing Page",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "Ramil Sagidullin",
+    "email": "black2001ray@gmail.com"
   },
   "license": "MIT",
   "keywords": [
@@ -15,7 +14,9 @@
     "tailwind",
     "landing-page",
     "template",
-    "responsive-design"
+    "responsive-design",
+    "contentik",
+    "contentik-ai"
   ],
   "private": true,
   "version": "0.1.1",
