@@ -17,7 +17,7 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[60px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage alt="" src="/src/assets/avatar1.png" />
+            <AvatarImage alt="" src="./src/assets/avatar1.png" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
@@ -37,7 +37,7 @@ export const HeroCards = () => {
       <Card className="absolute right-[20px] top-16 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="/src/assets/avatar4.png"
+            src="./src/assets/avatar4.png"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />

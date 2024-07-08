@@ -50,7 +50,7 @@ export const Navbar = () => {
               href="#"
               className="ml-2 font-bold text-xl flex align-center"
             >
-              <img className="w-7 h-7 mr-2 rounded-md" src="/src/assets/logo.png" />
+              <img className="w-7 h-7 mr-2 rounded-md" src="./src/assets/logo.png" />
               Contentik
             </a>
           </NavigationMenuItem>

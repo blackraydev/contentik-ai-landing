@@ -10,42 +10,42 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: '/src/assets/avatar1.png',
+    image: './src/assets/avatar1.png',
     name: 'Анна',
     userName: 'Копирайтер',
     comment:
       'Как копирайтер, я всегда ищу способы сэкономить время. Этот инструмент - настоящая находка!',
   },
   {
-    image: '/src/assets/avatar2.png',
+    image: './src/assets/avatar2.png',
     name: 'Дмитрий',
     userName: 'Блогер',
     comment:
       'Сервис помогает мне создавать интересные и уникальные посты для моего блога. Читатели заметили улучшение и вовлеченность выросла.',
   },
   {
-    image: '/src/assets/avatar3.png',
+    image: './src/assets/avatar3.png',
     name: 'Ольга',
     userName: 'Руководитель отдела маркетинга',
     comment:
       'Сервис просто потрясающий! Моя команда SMM теперь может создавать уникальный контент, который привлекает больше подписчиков.',
   },
   {
-    image: '/src/assets/avatar4.png',
+    image: './src/assets/avatar4.png',
     name: 'Иван',
     userName: 'SMM-специалист',
     comment:
       'Contentik значительно упростил мою работу. Теперь я могу создавать качественный контент быстрее и проще.',
   },
   {
-    image: '/src/assets/avatar5.png',
+    image: './src/assets/avatar5.png',
     name: 'Наталья',
     userName: 'Редактор новостного портала',
     comment:
       'Благодаря этому инструменту я могу генерировать статьи для нашего сайта намного быстрее. Спасибо Contentik!',
   },
   {
-    image: '/src/assets/avatar6.png',
+    image: './src/assets/avatar6.png',
     name: 'Мария',
     userName: 'Контент-менеджер',
     comment:
