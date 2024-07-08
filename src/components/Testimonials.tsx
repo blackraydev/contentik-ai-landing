@@ -10,7 +10,7 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: './src/assets/avatar1.png',
+    image: './img/avatar1.png',
     name: 'Анна',
     userName: 'Копирайтер',
     comment:
