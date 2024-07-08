@@ -32,7 +32,7 @@ const pricingList: PricingProps[] = [
     price: 499,
     description: 'Стартовый набор для распробывания новых возможностей',
     buttonText: 'Выбрать',
-    benefitList: ['100 генераций', '25 редактирований', 'GPT-3.5'],
+    benefitList: ['50 генераций', '25 редактирований', 'GPT-3.5'],
   },
   {
     title: 'Про',
@@ -46,7 +46,7 @@ const pricingList: PricingProps[] = [
     title: 'Эксперт',
     popular: 0,
     price: 3999,
-    description: 'Идеально для профессионалов и агентств',
+    description: 'Идеально для профессионалов и команд',
     buttonText: 'Выбрать',
     benefitList: ['2000 генераций', '250 редактирований', 'GPT-4 Omni', 'Персональная поддержка'],
   },
@@ -65,12 +65,16 @@ export const Pricing = () => {
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pricingList.map((pricing: PricingProps) => (
-          <div className="tariffGradient dark:tariffGradientDark">
+          <div
+            className={
+              pricing.popular === PopularPlanType.YES ? 'tariffGradient dark:tariffGradient' : ''
+            }
+          >
             <Card
               key={pricing.title}
               className={
                 pricing.popular === PopularPlanType.YES
-                  ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 tariffGradient'
+                  ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 w-full'
                   : ''
               }
             >

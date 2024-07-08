@@ -5,7 +5,6 @@ html {
 .tariffGradient {
   display: flex;
   flex-direction: column;
-  height: fit-content;
   border-radius: 8px;
   position: relative;
   align-items: center;
@@ -19,12 +18,11 @@ html {
   );
   animation: glowing 5s ease alternate infinite;
   background-size: 400% 400%;
+  padding: 1px;
 
   &:after {
     content: '';
     position: absolute;
-    height: calc(100% - 2px);
-    width: calc(100% - 2px);
     background: white;
     border-radius: 8px;
     z-index: -1;
