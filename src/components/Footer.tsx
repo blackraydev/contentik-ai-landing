@@ -34,7 +34,7 @@ export const Footer = () => {
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <a rel="noreferrer noopener" href="#" className="font-bold text-xl flex">
-            <img className="w-7 h-7 mr-2 rounded-md" src="./src/assets/logo.png" />
+            <img className="w-7 h-7 mr-2 rounded-md" src="./img/logo.png" />
             Contentik
           </a>
         </div>
