@@ -67,7 +67,7 @@ export const Footer = () => {
       </section>
 
       <section className="container pb-14 text-center">
-        <h3>&copy; 2024 Contentik AI </h3>
+        <h3>&copy; 2024 «Contentik». Все права защищены</h3>
       </section>
     </footer>
   );

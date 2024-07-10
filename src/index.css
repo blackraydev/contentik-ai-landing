@@ -4,11 +4,8 @@ html {
 
 .tariffGradient {
   display: flex;
-  flex-direction: column;
   border-radius: 8px;
   position: relative;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(
     -45deg,
     rgb(227, 185, 251),
