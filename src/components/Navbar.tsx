@@ -84,7 +84,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://blackraydev.github.io/contentik-ai"
+                    href="https://contentik-ai.ru/app"
                     className={`mt-10 border ${buttonVariants({ variant: 'default' })}`}
                   >
                     Вход
@@ -113,7 +113,7 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://blackraydev.github.io/contentik-ai"
+              href="https://contentik-ai.ru/app"
               className={`border ${buttonVariants({ variant: 'default' })}`}
             >
               Вход

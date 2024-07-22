@@ -105,7 +105,7 @@ export const Pricing = () => {
                 <Button className="w-full p-0">
                   <a
                     rel="noreferrer noopener"
-                    href="https://blackraydev.github.io/contentik-ai"
+                    href="https://contentik-ai.ru/app"
                     className="w-full h-full flex items-center justify-center"
                   >
                     {pricing.buttonText}

@@ -21,7 +21,7 @@ export const Hero = () => {
           <Button className="w-full md:w-1/3 p-0">
             <a
               rel="noreferrer noopener"
-              href="https://blackraydev.github.io/contentik-ai"
+              href="https://contentik-ai.ru/app"
               className="w-full h-full flex items-center justify-center"
             >
               Начать сейчас
