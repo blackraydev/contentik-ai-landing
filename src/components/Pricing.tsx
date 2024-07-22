@@ -11,6 +11,7 @@ enum PopularPlanType {
 interface PricingProps {
   title: string;
   popular: PopularPlanType;
+  oldPrice?: number;
   price: number;
   description: string;
   buttonText: string;
@@ -24,31 +25,34 @@ const pricingList: PricingProps[] = [
     price: 0,
     description: 'Идеально подходит для ознакомления с возможностями сервиса',
     buttonText: 'Попробовать бесплатно',
-    benefitList: ['5 генераций', '1 редактирование', 'GPT-3.5'],
+    benefitList: ['3 создания', '1 редактирование'],
   },
   {
     title: 'Стартовый',
     popular: 0,
-    price: 499,
-    description: 'Стартовый набор для распробывания новых возможностей',
-    buttonText: 'Выбрать',
-    benefitList: ['50 генераций', '25 редактирований', 'GPT-3.5'],
+    oldPrice: 499,
+    price: 399,
+    description: 'Подходит для базового использования',
+    buttonText: 'Попробовать бесплатно',
+    benefitList: ['50 созданий', '25 редактирований'],
   },
   {
     title: 'Про',
     popular: 1,
-    price: 1499,
+    oldPrice: 999,
+    price: 799,
     description: 'Подходит для активного использования',
-    buttonText: 'Выбрать',
-    benefitList: ['500 генераций', '100 редактирований', 'GPT-4 Omni', 'Приоритетная поддержка'],
+    buttonText: 'Попробовать бесплатно',
+    benefitList: ['150 созданий', '75 редактирований'],
   },
   {
     title: 'Эксперт',
     popular: 0,
-    price: 3999,
-    description: 'Идеально для профессионалов и команд',
-    buttonText: 'Выбрать',
-    benefitList: ['2000 генераций', '250 редактирований', 'GPT-4 Omni', 'Персональная поддержка'],
+    oldPrice: 1999,
+    price: 1599,
+    description: 'Подходит для серьёзной объемной работы',
+    buttonText: 'Попробовать бесплатно',
+    benefitList: ['500 созданий', '250 редактирований'],
   },
 ];
 
@@ -61,7 +65,7 @@ export const Pricing = () => {
         </span>
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Выберите план, который подходит именно вам, и начните работать с Contentik уже сегодня
+        Выберите план, который подходит именно вам, и начните работать с Contentik AI уже сейчас
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -88,8 +92,13 @@ export const Pricing = () => {
                   ) : null}
                 </CardTitle>
                 <div className="pt-2">
+                  {pricing.oldPrice && (
+                    <p className="text-l line-through text-muted-foreground">
+                      {pricing.oldPrice} / месяц
+                    </p>
+                  )}
                   <span className="text-3xl font-bold">{pricing.price} ₽</span>
-                  <span className="text-muted-foreground"> / месяц</span>
+                  <span> / месяц</span>
                 </div>
 
                 <CardDescription className="pt-2 pb-4">{pricing.description}</CardDescription>

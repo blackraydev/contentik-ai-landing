@@ -22,6 +22,7 @@ module.exports = {
         ring: 'var(--ring)',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        logo: 'var(--logo)',
         section: {
           foreground: 'var(--section-foreground)',
         },

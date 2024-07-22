@@ -35,6 +35,8 @@
     --input: none;
     --ring: none;
 
+    --logo: rgb(245, 245, 250);
+
     --section-foreground: rgb(150, 150, 155);
 
     --radius: 0.5rem;
@@ -70,6 +72,8 @@
     --border: rgb(35, 35, 37);
     --input: none;
     --ring: none;
+
+    --logo: rgb(36, 36, 42);
 
     --section-foreground: rgb(83, 83, 90);
   }

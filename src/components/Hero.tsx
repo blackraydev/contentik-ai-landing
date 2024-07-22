@@ -8,7 +8,7 @@ export const Hero = () => {
         <main className="text-5xl md:text-6xl font-bold">
           <h2 className="inline">Воплощайте идеи с помощью</h2>{' '}
           <h1 className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-            Contentik
+            Contentik AI
           </h1>
         </main>
 

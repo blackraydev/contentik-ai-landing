@@ -44,14 +44,14 @@ export const UseCases = () => {
   return (
     <section id="use-cases" className="container py-24 sm:py-32">
       <div>
-        <h2 className="mb-8 text-3xl md:text-4xl font-bold">
+        <h2 className="mb-8 text-3xl text-center md:text-4xl font-bold">
           <span className="bg-gradient-to-b from-section-foreground to-primary text-transparent bg-clip-text">
             Примеры использования
           </span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2 lg:columns-2 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
           {useCasesList.map(({ title, description }: UseCaseProps) => (
-            <Card key={title}>
+            <Card key={title} className="relative hover-group">
               <CardHeader
                 className={`space-y-1 flex md:flex-row ${
                   description ? 'items-start' : 'items-center'
@@ -64,6 +64,8 @@ export const UseCases = () => {
                   )}
                 </div>
               </CardHeader>
+              
+              <div className="hover-elem" />
             </Card>
           ))}
         </div>

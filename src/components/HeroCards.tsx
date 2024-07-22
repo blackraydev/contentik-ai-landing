@@ -17,7 +17,7 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[60px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage alt="" src="./img/avatar1.png" />
+            <AvatarImage alt="" src="./img/testimonial1.jpg" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
@@ -37,9 +37,9 @@ export const HeroCards = () => {
       <Card className="absolute right-[20px] top-16 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="./img/avatar4.png"
+            src="./img/testimonial4.jpg"
             alt="user avatar"
-            className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+            className="absolute grayscale-[0%] -top-4 rounded-full w-16 h-16 aspect-square object-cover"
           />
           <CardTitle className="text-center">Иван</CardTitle>
           <CardDescription>SMM-специалист</CardDescription>
@@ -83,7 +83,7 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {['5 генераций', '1 редактирование', 'GPT 3.5'].map((benefit: string) => (
+            {['3 создания', '1 редактирование'].map((benefit: string) => (
               <span key={benefit} className="flex">
                 <Check className="text-green-500" /> <h3 className="ml-2">{benefit}</h3>
               </span>

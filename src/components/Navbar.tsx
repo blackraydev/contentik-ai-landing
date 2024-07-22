@@ -43,15 +43,15 @@ export const Navbar = () => {
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between">
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
               href="#"
               className="ml-2 font-bold text-xl flex align-center"
             >
-              <img className="w-7 h-7 mr-2 rounded-md" src="./img/logo.png" />
-              Contentik
+              <img className="w-7 h-7 mr-2 rounded-md p-1 bg-logo" src="./img/logo.png" />
+              Contentik AI
             </a>
           </NavigationMenuItem>
 
@@ -68,7 +68,7 @@ export const Navbar = () => {
 
               <SheetContent side={'left'}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">Contentik</SheetTitle>
+                  <SheetTitle className="font-bold text-xl">Contentik AI</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-10">
                   {routeList.map(({ href, label }: RouteProps) => (

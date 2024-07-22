@@ -34,8 +34,8 @@ export const Footer = () => {
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <a rel="noreferrer noopener" href="#" className="font-bold text-xl flex">
-            <img className="w-7 h-7 mr-2 rounded-md" src="./img/logo.png" />
-            Contentik
+            <img className="w-7 h-7 mr-2 rounded-md p-1 bg-logo" src="./img/logo.png" />
+            Contentik AI
           </a>
         </div>
 
@@ -52,12 +52,6 @@ export const Footer = () => {
 
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Сообщество</h3>
-          <div>
-            <a rel="noreferrer noopener" href="#" className="opacity-60 hover:opacity-100">
-              Instagram
-            </a>
-          </div>
-
           <div>
             <a rel="noreferrer noopener" href="#" className="opacity-60 hover:opacity-100">
               Telegram
