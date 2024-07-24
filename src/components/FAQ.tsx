@@ -103,8 +103,7 @@ export const FAQ = () => {
       <h3 className="font-medium mt-4">
         Остались вопросы?{' '}
         <a
-          rel="noreferrer noopener"
-          href="#"
+          href="mailto:support@contentik-ai.ru?subject=Вопрос"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
           Напишите нам

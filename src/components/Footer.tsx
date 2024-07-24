@@ -53,8 +53,49 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Сообщество</h3>
           <div>
-            <a rel="noreferrer noopener" href="#" className="opacity-60 hover:opacity-100">
-              Telegram
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://t.me/contentik_ai"
+              className="opacity-60 hover:opacity-100"
+            >
+              Telegram Канал
+            </a>
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://t.me/contentik_ai_chat"
+              className="opacity-60 hover:opacity-100"
+            >
+              Telegram Чат
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">Поддержка</h3>
+          <div>
+            <a
+              href="mailto:support@contentik-ai.ru?subject=Вопрос"
+              className="opacity-60 hover:opacity-100"
+            >
+              support@contentik-ai.ru
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">Условия</h3>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://contentik-ai.ru/offer"
+              className="opacity-60 hover:opacity-100"
+            >
+              Публичная оферта
             </a>
           </div>
         </div>
