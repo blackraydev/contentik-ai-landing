@@ -17,18 +17,18 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[60px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage alt="" src="./img/testimonial1.jpg" />
+            <AvatarImage alt="" src="./img/testimonial2.jpg" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Анна</CardTitle>
-            <CardDescription>Копирайтер</CardDescription>
+            <CardTitle className="text-lg">Гульшат</CardTitle>
+            <CardDescription>SMM-специалист</CardDescription>
           </div>
         </CardHeader>
 
         <CardContent>
-          Как копирайтер, я всегда ищу способы сэкономить время. Этот инструмент - настоящая
+          Как SMM-щик, я всегда ищу способы сэкономить время. Этот инструмент - настоящая
           находка!
         </CardContent>
       </Card>
@@ -41,8 +41,8 @@ export const HeroCards = () => {
             alt="user avatar"
             className="absolute grayscale-[0%] -top-4 rounded-full w-16 h-16 aspect-square object-cover"
           />
-          <CardTitle className="text-center">Иван</CardTitle>
-          <CardDescription>SMM-специалист</CardDescription>
+          <CardTitle className="text-center">Даниэль</CardTitle>
+          <CardDescription>Копирайтер</CardDescription>
         </CardHeader>
 
         <CardContent className="text-center">
