@@ -10,42 +10,42 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image: './img/testimonial1.jpg',
+    image: './img/otziv1.jpg',
     name: 'Олег',
     userName: 'Блогер',
     comment:
       'Сервис помогает мне создавать интересные и уникальные посты для моего блога. Читатели заметили улучшение и вовлеченность выросла.',
   },
   {
-    image: './img/testimonial2.jpg',
+    image: './img/otziv2.jpg',
     name: 'Гульшат',
     userName: 'SMM-специалист',
     comment:
       'Как SMM-щик, я всегда ищу способы сэкономить время. Этот инструмент - настоящая находка!',
   },
   {
-    image: './img/testimonial3.jpg',
+    image: './img/otziv3.jpg',
     name: 'Гульназ',
     userName: 'SMM-специалист',
     comment:
       'Сервис просто потрясающий! С помощью него я могу легко генерировать тексты для своих клиентов. Удобный интерфейс и возможность настройки параметров делают его незаменимым инструментом в моей работе.',
   },
   {
-    image: './img/testimonial4.jpg',
+    image: './img/otziv4.jpg',
     name: 'Даниэль',
     userName: 'Копирайтер',
     comment:
       'Contentik значительно упростил мою работу. Теперь я могу создавать качественный контент быстрее и проще.',
   },
   {
-    image: './img/testimonial5.jpg',
+    image: './img/otziv5.jpg',
     name: 'Андрей',
     userName: 'Контент-менеджер',
     comment:
       'Contentik стал незаменимым помощником в моей работе. Благодаря ему я могу создавать качественные статьи быстрее и эффективнее.',
   },
   {
-    image: './img/testimonial6.jpg',
+    image: './img/otziv6.jpg',
     name: 'Максим',
     userName: 'Руководитель отдела маркетинга',
     comment:
