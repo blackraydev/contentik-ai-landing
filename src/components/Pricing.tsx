@@ -40,7 +40,7 @@ const pricingList: PricingProps[] = [
     title: 'Про',
     popular: 1,
     oldPrice: 999,
-    price: 799,
+    price: 699,
     description: 'Подходит для активного использования',
     buttonText: 'Попробовать бесплатно',
     benefitList: ['150 созданий', '75 редактирований'],
