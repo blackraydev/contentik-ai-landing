@@ -30,7 +30,7 @@ const pricingList: PricingProps[] = [
   {
     title: 'Стартовый',
     popular: 0,
-    oldPrice: 499,
+    oldPrice: 549,
     price: 399,
     description: 'Подходит для базового использования',
     buttonText: 'Попробовать бесплатно',
